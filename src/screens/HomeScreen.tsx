@@ -1,10 +1,10 @@
 import React from "react";
 import { View, Text, StyleSheet, Dimensions, Image } from 'react-native';
 
-export const LandingScreen = () => {
+export const HomeScreen = () => {
     return (
         <View>
-            <Text>Landing Screen</Text>
+            <Text>Home Screen</Text>
         </View>
     )
 };
