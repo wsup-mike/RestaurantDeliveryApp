@@ -15,6 +15,7 @@ export const LandingScreen = () => {
                 <View style={styles.addressContainer}>
                     <Text style={styles.addressContainer}>Your delivery address</Text>
                 </View>
+                <Text style={styles.addressText}>Waiting for current location</Text>
             </View>
             <View style={styles.footer}>
                 <Text>Footer</Text>
@@ -65,5 +66,11 @@ const styles = StyleSheet.create({
         fontSize: 24,
         fontWeight: '700',
         color: '#7d7d7d',
-    }
+    },
+
+    addressText: {
+        fontSize: 20,
+        fontWeight: '200',
+        color: '#4f4f4f',
+    },
 });
