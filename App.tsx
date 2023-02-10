@@ -32,7 +32,44 @@ const switchNavigator = createSwitchNavigator({
           return <Image source={icon} style={styles.tabIcon} />
         }
       }
-    }
+    },
+
+    Offer: {
+      screen: createStackNavigator({
+        HomePage: HomeScreen
+      }),
+      navigationOptions: {
+        tabBarIcon: ({ focused, tintColor }) => {
+          let icon = focused == true ? require('./src/images/offer_icon.png') : require('./src/images/offer_n_icon.png')
+          return <Image source={icon} style={styles.tabIcon} />
+        }
+      }
+    },
+
+    Cart: {
+      screen: createStackNavigator({
+        HomePage: HomeScreen
+      }),
+      navigationOptions: {
+        tabBarIcon: ({ focused, tintColor }) => {
+          let icon = focused == true ? require('./src/images/cart_icon.png') : require('./src/images/cart_n_icon.png')
+          return <Image source={icon} style={styles.tabIcon} />
+        }
+      }
+    },
+
+    Account: {
+      screen: createStackNavigator({
+        HomePage: HomeScreen
+      }),
+      navigationOptions: {
+        tabBarIcon: ({ focused, tintColor }) => {
+          let icon = focused == true ? require('./src/images/account_icon.png') : require('./src/account/home_n_icon.png')
+          return <Image source={icon} style={styles.tabIcon} />
+        }
+      }
+    },
+
   })
 
 });
