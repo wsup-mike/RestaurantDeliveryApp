@@ -3,10 +3,14 @@ import { StyleSheet, Text, View } from 'react-native';
 import { HomeScreen } from './src/screens/HomeScreen';
 import { LandingScreen } from './src/screens/LandingScreen';
 
+import { NavigationContainer } from '@react-navigation/native';
+
 
 export default function App() {
   return (
-    <LandingScreen />
+    <NavigationContainer>
+      <LandingScreen />
+    </NavigationContainer>
   );
 }
 
