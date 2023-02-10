@@ -65,12 +65,11 @@ const RootStack = createStackNavigator({
       }),
       navigationOptions: {
         tabBarIcon: ({ focused, tintColor }) => {
-          let icon = focused == true ? require('./src/images/account_icon.png') : require('./src/account/account_n_icon.png')
+          let icon = focused == true ? require('./src/images/account_icon.png') : require('./src/images/account_n_icon.png')
           return <Image source={icon} style={styles.tabIcon} />
         }
       }
     },
-
   })
 
 });
