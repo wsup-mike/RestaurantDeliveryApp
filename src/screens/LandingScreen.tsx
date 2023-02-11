@@ -1,11 +1,14 @@
 import React, { useState, useReducer, useEffect } from "react";
 import { View, Text, StyleSheet, Dimensions, Image } from 'react-native';
 
+import { useNavigation } from "../utils/useNavigation";
 import * as Location from 'expo-location';
 
 const screenWidth = Dimensions.get('screen').width
 
 export const LandingScreen = () => {
+
+    const {navigate} = useNavigation();
     // const { addressContainer } = styles;
     const [errorMsg, setErrorMsg] = useState("");
     const [address, setAddress] = useState<Location.LocationGeocodedAddress>();
