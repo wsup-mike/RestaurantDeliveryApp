@@ -63,7 +63,7 @@ const HomeTabsScreen: React.FC = () => {
       />
 
       <HomeTabs.Screen 
-        name='Cart' 
+        name='The fucking Cart Screen this is.' 
         component={CartScreen} 
         options={{
           tabBarIcon: ({focused, color}) => {
@@ -92,7 +92,8 @@ const HomeTabsScreen: React.FC = () => {
 export default function App() {
   return (
     <NavigationContainer>
-      <LandingStackScreen />
+      {/* <LandingStackScreen /> */}
+      <HomeStackScreen />
     </NavigationContainer>
   );
 }
