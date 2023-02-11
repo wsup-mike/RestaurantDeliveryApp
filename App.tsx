@@ -1,12 +1,16 @@
 import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, Text, View, Image } from 'react-native';
-import { HomeScreen } from './src/screens/HomeScreen';
-import { LandingScreen } from './src/screens/LandingScreen';
 import 'react-native-gesture-handler';
 
 import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack'
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
+
+import { HomeScreen } from './src/screens/HomeScreen';
+import { LandingScreen } from './src/screens/LandingScreen';
+import { AccountScreen } from './src/screens/AccountScreen';
+import { CartScreen } from './src/screens/CartScreen';
+import { OfferScreen } from './src/screens/OfferScreen';
 
 const LandingStack = createStackNavigator();
 const HomeStack = createStackNavigator();
@@ -14,7 +18,10 @@ const HomeTabs = createBottomTabNavigator();
 
 const LandingStackScreen: React.FC = () => {
   return( 
-    <LandingStack.Navigator initialRouteName='Landing'>
+    <LandingStack.Navigator 
+      initialRouteName='Landing' 
+      screenOptions={{headerShown: false}}
+    >
       <LandingStack.Screen name='Landing' component={LandingScreen} />
     </LandingStack.Navigator>
   );
@@ -36,10 +43,11 @@ const HomeTabsScreen: React.FC = () => {
         name='Home' 
         component={HomeScreen} 
         options={{
-          tabBarIcon: ({focused, tintColor}) => {
+          tabBarIcon: ({focused, color}) => {
             let icon = focused == true ? require('./src/images/home_icon.png') : require('./src/images/home_n_icon.png')
             return <Image source={icon} style={styles.tabIcon} />
           }
+          
         }}
       />
 
@@ -47,7 +55,7 @@ const HomeTabsScreen: React.FC = () => {
         name='Offer' 
         component={OfferScreen} 
         options={{
-          tabBarIcon: ({focused, tintColor}) => {
+          tabBarIcon: ({focused, color}) => {
             let icon = focused == true ? require('./src/images/offer_icon.png') : require('./src/images/offer_n_icon.png')
             return <Image source={icon} style={styles.tabIcon} />
           }
@@ -58,7 +66,7 @@ const HomeTabsScreen: React.FC = () => {
         name='Cart' 
         component={CartScreen} 
         options={{
-          tabBarIcon: ({focused, tintColor}) => {
+          tabBarIcon: ({focused, color}) => {
             let icon = focused == true ? require('./src/images/cart_icon.png') : require('./src/images/cart_n_icon.png')
             return <Image source={icon} style={styles.tabIcon} />
           }
@@ -69,7 +77,7 @@ const HomeTabsScreen: React.FC = () => {
         name='Account' 
         component={AccountScreen} 
         options={{
-          tabBarIcon: ({focused, tintColor}) => {
+          tabBarIcon: ({focused, color}) => {
             let icon = focused == true ? require('./src/images/account_icon.png') : require('./src/images/account_n_icon.png')
             return <Image source={icon} style={styles.tabIcon} />
           }
