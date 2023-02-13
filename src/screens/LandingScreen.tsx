@@ -1,18 +1,17 @@
 import React, { useState, useReducer, useEffect } from "react";
 import { View, Text, StyleSheet, Dimensions, Image } from 'react-native';
 
-import { useNavigation } from "../utils/useNavigation";
+import { useNavigation } from "../utils";
 import * as Location from 'expo-location';
 
 const screenWidth = Dimensions.get('screen').width
 
 export const LandingScreen = () => {
 
-    const {navigate} = useNavigation();
+    const { navigate } = useNavigation();
     // const { addressContainer } = styles;
     const [errorMsg, setErrorMsg] = useState("");
     const [address, setAddress] = useState<Location.LocationGeocodedAddress>();
-
     const [displayAddress, setDisplayAddress] =  useState("Waiting for current location");
 
     useEffect(() => {
@@ -36,6 +35,13 @@ export const LandingScreen = () => {
                     setAddress(item)
                     let currentAddress = `${item.name}, ${item.street}, ${item.postalCode}, ${item.country}`
                     setDisplayAddress(currentAddress)
+                    
+                    if(currentAddress.length > 0) {
+                        setTimeout(() => {
+                            navigate('HomeTabs')
+                        }, 1000)
+                    }
+                    
                     return;
                 }
 
