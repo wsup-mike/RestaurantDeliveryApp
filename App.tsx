@@ -92,8 +92,8 @@ const HomeTabsScreen: React.FC = () => {
 export default function App() {
   return (
     <NavigationContainer>
-      {/* <LandingStackScreen /> */}
-      <HomeStackScreen />
+      <LandingStackScreen />
+      {/* <HomeStackScreen /> */}
     </NavigationContainer>
   );
 }
