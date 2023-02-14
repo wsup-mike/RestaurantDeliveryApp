@@ -20,7 +20,7 @@ const LandingStackScreen: React.FC = () => {
   return( 
     <LandingStack.Navigator 
       initialRouteName='Landing' 
-      screenOptions={{headerShown: false}}
+      screenOptions={{headerShown: true}}
     >
       <LandingStack.Screen name='Landing' component={LandingScreen} />
     </LandingStack.Navigator>
@@ -30,8 +30,9 @@ const LandingStackScreen: React.FC = () => {
 
 const HomeStackScreen: React.FC = () => {
   return (
-    <HomeStack.Navigator initialRouteName='HomeTabs'>
-      <HomeStack.Screen name='HomeTabs' component={HomeTabsScreen}/>
+    <HomeStack.Navigator initialRouteName='HomeStackScreen'>
+      {/* <HomeStack.Screen name='HomeStackScreen' component={HomeTabsScreen}/> */}
+      <HomeStack.Screen name='HomeStackScreen' component={HomeTabsScreen}/>
     </HomeStack.Navigator>
   )
 };
