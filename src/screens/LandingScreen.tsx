@@ -4,17 +4,16 @@ import { View, Text, StyleSheet, Dimensions, Image } from 'react-native';
 import { ParamListBase, useNavigation } from "@react-navigation/native";
 import * as Location from 'expo-location';
 import { StackNavigationProp } from "@react-navigation/stack";
+import { HomeScreen } from "./HomeScreen"; 
+
+const screenWidth = Dimensions.get('screen').width
 
 interface Props {
     navigation: StackNavigationProp<ParamListBase>;
 }
 
-const screenWidth = Dimensions.get('screen').width
-
 export const LandingScreen: React.FC<Props> = ({ navigation }) => {
 
-    // const navigation = useNavigation();
-    
     const [errorMsg, setErrorMsg] = useState("");
     const [address, setAddress] = useState<Location.LocationGeocodedAddress>();
     const [displayAddress, setDisplayAddress] =  useState("Waiting for current location");
@@ -43,7 +42,7 @@ export const LandingScreen: React.FC<Props> = ({ navigation }) => {
                     
                     if(currentAddress.length > 0) {
                         setTimeout(() => {
-                            navigation.navigate('Home')
+                            navigation.navigate('HomeStackScreen')
                         }, 1000)
                     }
                     
