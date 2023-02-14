@@ -38,7 +38,7 @@ export const LandingScreen: React.FC<Props> = ({ navigation }) => {
 
                 for(let item of addressResponse) {
                     setAddress(item)
-                    let currentAddress = `${item.name}, ${item.street}, ${item.postalCode}, ${item.country}`
+                    let currentAddress = `${item.name} ${item.city} ${item.postalCode}`
                     setDisplayAddress(currentAddress)
                     
                     if(currentAddress.length > 0) {
