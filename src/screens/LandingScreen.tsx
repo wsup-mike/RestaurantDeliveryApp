@@ -4,7 +4,7 @@ import { View, Text, StyleSheet, Dimensions, Image } from 'react-native';
 import { ParamListBase } from "@react-navigation/native";
 import * as Location from 'expo-location';
 import { StackNavigationProp } from "@react-navigation/stack";
-import { HomeTabsScreen } from "../../App";
+import { HomeTabs } from "../../App";
 import { useNavigation } from "@react-navigation/native";
 
 const screenWidth = Dimensions.get('screen').width
@@ -45,7 +45,7 @@ export const LandingScreen: React.FC = () => {
                     
                     if(currentAddress.length > 0) {
                         setTimeout(() => {
-                            navigation.navigate('HomeTabsScreen', {screen: 'Home'})
+                            navigation.navigate('HomeTabs', {screen: 'Home'})
                         }, 500)
                     }
                     
