@@ -32,13 +32,13 @@ const LandingStackScreen: React.FC = () => {
 };
 
 
-export const HomeStackScreen: React.FC = () => {
-  return (
-    <HomeStack.Navigator>
-      <HomeStack.Screen name='Huh' component={HomeTabsScreen} />
-    </HomeStack.Navigator>
-  )
-};
+// export const HomeStackScreen: React.FC = () => {
+//   return (
+//     <HomeStack.Navigator>
+//       <HomeStack.Screen name='Huh' component={HomeTabsScreen} />
+//     </HomeStack.Navigator>
+//   )
+// };
 
 export const HomeTabsScreen: React.FC = () => {
   return (
@@ -95,8 +95,8 @@ export const HomeTabsScreen: React.FC = () => {
 export default function App() {
   return (
     <NavigationContainer>
-      <LandingStackScreen />
-      {/* <HomeStackScreen /> */}
+      {/* <LandingStackScreen /> */}
+      <HomeTabsScreen />
     </NavigationContainer>
   );
 }
