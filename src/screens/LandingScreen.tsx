@@ -4,13 +4,14 @@ import { View, Text, StyleSheet, Dimensions, Image } from 'react-native';
 import { ParamListBase, useNavigation } from "@react-navigation/native";
 import * as Location from 'expo-location';
 import { StackNavigationProp } from "@react-navigation/stack";
-import { HomeStackScreen } from "../../App";
+import { HomeStackScreen, HomeTabsScreen } from "../../App";
 
 const screenWidth = Dimensions.get('screen').width
 
 interface Props {
     navigation: StackNavigationProp<ParamListBase>;
 }
+
 
 export const LandingScreen: React.FC<Props> = ({ navigation }) => {
 
@@ -43,7 +44,7 @@ export const LandingScreen: React.FC<Props> = ({ navigation }) => {
                     if(currentAddress.length > 0) {
                         setTimeout(() => {
                             navigation.navigate('HomeStackScreen')
-                        }, 1000)
+                        }, 500)
                     }
                     
                     return;
