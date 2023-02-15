@@ -1,7 +1,7 @@
 import React, { useState, useReducer, useEffect } from "react";
 import { View, Text, StyleSheet, Dimensions, Image } from 'react-native';
 
-import { ParamListBase, useNavigation } from "@react-navigation/native";
+import { ParamListBase } from "@react-navigation/native";
 import * as Location from 'expo-location';
 import { StackNavigationProp } from "@react-navigation/stack";
 import { HomeStackScreen } from "../../App";
@@ -13,7 +13,9 @@ interface Props {
 }
 
 
-export const LandingScreen: React.FC<Props> = ({ navigation }) => {
+export const LandingScreen: React.FC<Props> = (props) => {
+
+    const { navigation } = props;
 
     const [errorMsg, setErrorMsg] = useState("");
     const [address, setAddress] = useState<Location.LocationGeocodedAddress>();
