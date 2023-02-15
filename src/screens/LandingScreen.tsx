@@ -12,7 +12,6 @@ interface Props {
     navigation: StackNavigationProp<ParamListBase>;
 }
 
-
 export const LandingScreen: React.FC<Props> = (props) => {
 
     const { navigation } = props;
@@ -45,7 +44,7 @@ export const LandingScreen: React.FC<Props> = (props) => {
                     
                     if(currentAddress.length > 0) {
                         setTimeout(() => {
-                            navigation.navigate('Home', { screen: 'HomeStackScreen' });
+                            navigation.navigate('HomeStackScreen', { screen: 'Home' });
                         }, 500)
                     }
                     
@@ -74,7 +73,6 @@ export const LandingScreen: React.FC<Props> = (props) => {
                 <Text>Footer</Text>
             </View>
         </View>
-      
     )
 }
 
