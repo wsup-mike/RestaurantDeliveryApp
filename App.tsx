@@ -42,7 +42,7 @@ const LandingStackScreen: React.FC = () => {
 
 export const HomeTabsScreen: React.FC = () => {
   return (
-    <HomeTabs.Navigator>
+    <HomeTabs.Navigator initialRouteName='Home'>
       <HomeTabs.Screen 
         name='Home' 
         component={HomeScreen} 
