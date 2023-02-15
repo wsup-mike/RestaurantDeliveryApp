@@ -15,7 +15,7 @@ import { OfferScreen } from './src/screens/OfferScreen';
 
 const LandingStack = createStackNavigator();
 const HomeStack = createStackNavigator();
-const HomeTabs = createBottomTabNavigator();
+export const HomeTabs = createBottomTabNavigator();
 
 export const LandingStackScreen: React.FC = () => {
   return( 
