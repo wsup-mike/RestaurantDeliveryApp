@@ -45,7 +45,7 @@ export const LandingScreen: React.FC = () => {
                     
                     if(currentAddress.length > 0) {
                         setTimeout(() => {
-                            navigation.navigate('Home')
+                            navigation.navigate('Landing')
                         }, 500)
                     }
                     
