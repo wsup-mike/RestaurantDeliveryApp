@@ -5,16 +5,17 @@ import { ParamListBase } from "@react-navigation/native";
 import * as Location from 'expo-location';
 import { StackNavigationProp } from "@react-navigation/stack";
 import { HomeStackScreen, HomeTabsScreen } from "../../App";
+import { useNavigation } from "@react-navigation/native";
 
 const screenWidth = Dimensions.get('screen').width
 
-interface Props {
-    navigation: StackNavigationProp<ParamListBase>;
-}
+// interface Props {
+//     navigation: StackNavigationProp<ParamListBase>;
+// }
 
-export const LandingScreen: React.FC<Props> = (props) => {
+export const LandingScreen: React.FC = () => {
 
-    const { navigation } = props;
+    const navigation = useNavigation();
 
     const [errorMsg, setErrorMsg] = useState("");
     const [address, setAddress] = useState<Location.LocationGeocodedAddress>();
@@ -44,7 +45,7 @@ export const LandingScreen: React.FC<Props> = (props) => {
                     
                     if(currentAddress.length > 0) {
                         setTimeout(() => {
-                            navigation.navigate('HomeStackScreen', { screen: 'Home' });
+                            navigation.navigate('Home', { screen: 'Home' });
                         }, 500)
                     }
                     
