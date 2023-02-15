@@ -1,9 +1,9 @@
 import React, { useState, useReducer, useEffect } from "react";
 import { View, Text, StyleSheet, Dimensions, Image } from 'react-native';
 
-import { ParamListBase } from "@react-navigation/native";
+// import { ParamListBase } from "@react-navigation/native";
 import * as Location from 'expo-location';
-import { StackNavigationProp } from "@react-navigation/stack";
+// import { StackNavigationProp } from "@react-navigation/stack";
 import { HomeTabs } from "../../App";
 import { useNavigation } from "@react-navigation/native";
 import { LandingStackScreen } from "../../App";
@@ -46,7 +46,7 @@ export const LandingScreen: React.FC = () => {
                     
                     if(currentAddress.length > 0) {
                         setTimeout(() => {
-                            navigation.navigate('Landing')
+                            navigation.navigate('HomeTabs')
                         }, 500)
                     }
                     
