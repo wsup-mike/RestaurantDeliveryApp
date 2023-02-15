@@ -23,7 +23,10 @@ const LandingStackScreen: React.FC = () => {
       initialRouteName='Landing' 
       screenOptions={{headerShown: true}}
     >
-      <LandingStack.Screen name='Landing' component={LandingScreen} />
+      <LandingStack.Screen 
+        name='Landing' 
+        component={LandingScreen} 
+      />
     </LandingStack.Navigator>
   );
 };
