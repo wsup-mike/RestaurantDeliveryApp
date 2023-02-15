@@ -51,7 +51,6 @@ export const HomeTabsScreen: React.FC = () => {
             let icon = focused == true ? require('./src/images/home_icon.png') : require('./src/images/home_n_icon.png')
             return <Image source={icon} style={styles.tabIcon} />
           }
-          
         }}
       />
 
