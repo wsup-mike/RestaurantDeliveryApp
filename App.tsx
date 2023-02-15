@@ -12,6 +12,7 @@ import { AccountScreen } from './src/screens/AccountScreen';
 import { CartScreen } from './src/screens/CartScreen';
 import { OfferScreen } from './src/screens/OfferScreen';
 
+
 const LandingStack = createStackNavigator();
 const HomeStack = createStackNavigator();
 const HomeTabs = createBottomTabNavigator();
@@ -28,16 +29,16 @@ const LandingStackScreen: React.FC = () => {
 };
 
 
-const HomeStackScreen: React.FC = () => {
+export const HomeStackScreen: React.FC = () => {
   return (
-    <HomeStack.Navigator initialRouteName='HomeStackScreen'>
+    <HomeStack.Navigator>
       {/* <HomeStack.Screen name='HomeStackScreen' component={HomeTabsScreen}/> */}
-      <HomeStack.Screen name='HomeStackScreen' component={HomeTabsScreen}/>
+      <HomeStack.Screen name='Huh' component={HomeTabsScreen} />
     </HomeStack.Navigator>
   )
 };
 
-const HomeTabsScreen: React.FC = () => {
+export const HomeTabsScreen: React.FC = () => {
   return (
     <HomeTabs.Navigator>
       <HomeTabs.Screen 
