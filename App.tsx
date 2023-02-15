@@ -35,7 +35,6 @@ const LandingStackScreen: React.FC = () => {
 export const HomeStackScreen: React.FC = () => {
   return (
     <HomeStack.Navigator>
-      {/* <HomeStack.Screen name='HomeStackScreen' component={HomeTabsScreen}/> */}
       <HomeStack.Screen name='Huh' component={HomeTabsScreen} />
     </HomeStack.Navigator>
   )
