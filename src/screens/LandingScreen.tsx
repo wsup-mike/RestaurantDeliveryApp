@@ -4,7 +4,7 @@ import { View, Text, StyleSheet, Dimensions, Image } from 'react-native';
 import { ParamListBase } from "@react-navigation/native";
 import * as Location from 'expo-location';
 import { StackNavigationProp } from "@react-navigation/stack";
-import { HomeStackScreen, HomeTabsScreen } from "../../App";
+import { HomeTabsScreen } from "../../App";
 import { useNavigation } from "@react-navigation/native";
 
 const screenWidth = Dimensions.get('screen').width
