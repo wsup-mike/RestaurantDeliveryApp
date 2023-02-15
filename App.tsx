@@ -17,7 +17,7 @@ const LandingStack = createStackNavigator();
 const HomeStack = createStackNavigator();
 const HomeTabs = createBottomTabNavigator();
 
-const LandingStackScreen: React.FC = () => {
+export const LandingStackScreen: React.FC = () => {
   return( 
     <LandingStack.Navigator 
       initialRouteName='Landing' 
