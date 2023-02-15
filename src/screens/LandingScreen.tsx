@@ -6,6 +6,7 @@ import * as Location from 'expo-location';
 import { StackNavigationProp } from "@react-navigation/stack";
 import { HomeTabs } from "../../App";
 import { useNavigation } from "@react-navigation/native";
+import { LandingStackScreen } from "../../App";
 
 const screenWidth = Dimensions.get('screen').width
 
