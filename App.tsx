@@ -12,6 +12,8 @@ import { AccountScreen } from './src/screens/AccountScreen';
 import { CartScreen } from './src/screens/CartScreen';
 import { OfferScreen } from './src/screens/OfferScreen';
 
+import { Provider } from 'react-redux';
+
 
 const LandingStack = createStackNavigator();
 const HomeStack = createStackNavigator();
