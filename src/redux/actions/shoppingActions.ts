@@ -16,5 +16,7 @@ export interface ShoppingErrorAction {
     payload: any
 }
 
+export type ShoppingAction = AvailabilityAction | ShoppingErrorAction;
+
 //New action creator function: Trigger actions from components
 
