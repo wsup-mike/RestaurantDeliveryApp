@@ -1,7 +1,7 @@
 // To create 3 individual interfaces ('Models!') for our final data object (Define this object shape)
 
 //Category Model
-export interface Category {
+export interface CategoryModel {
     title: string,
     icon: string,
 }
@@ -18,7 +18,7 @@ export interface FoodModel {
 }
 
 //Restaurant Model
-export interface Restaurant {
+export interface RestaurantModel {
     _id: string;
     name: string;
     foodType: string;
@@ -26,4 +26,11 @@ export interface Restaurant {
     phone: string;
     images: string;
     foods: [FoodModel];
+}
+
+//To be able to utilize all models as 1 single model to be read by Axios eventually
+export interface FoodAvailability {
+    categories: [CategoryModel];
+    restaurants: [RestaurantModel];
+    foods: [FoodModel]
 }
