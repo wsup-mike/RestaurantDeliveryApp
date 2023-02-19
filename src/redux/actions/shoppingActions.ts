@@ -19,7 +19,7 @@ export interface ShoppingErrorAction {
 export type ShoppingAction = AvailabilityAction | ShoppingErrorAction;
 
 //New action creator function: Trigger actions from components
-export const onUpdateLocation = () => {
+export const onAvailability = () => {
     return async ( dispatch: Dispatch<ShoppingAction>) => {
         try {
             // First to call the Axios webservice
