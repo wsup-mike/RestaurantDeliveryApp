@@ -96,10 +96,12 @@ export const HomeTabsScreen: React.FC = () => {
 
 export default function App() {
   return (
+    <Provider store={store}>
     <NavigationContainer>
       {/* <LandingStackScreen /> */}
       <HomeTabsScreen />
     </NavigationContainer>
+    </Provider>
   );
 }
 
