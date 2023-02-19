@@ -6,5 +6,5 @@ import { FoodAvailability } from '../models';
 
 export interface AvailabilityAction {
     readonly type: 'ON_AVAILABILITY',
-    payload: 
+    payload: FoodAvailability,
 }
