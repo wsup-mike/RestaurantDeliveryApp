@@ -1,5 +1,8 @@
 // To create 3 individual interfaces ('Models!') for our final data object (Define this object shape)
 
+// To use expo location to 
+import { } from 'expo-location';
+
 //Category Model
 export interface CategoryModel {
     title: string,
@@ -33,4 +36,13 @@ export interface FoodAvailability {
     categories: [CategoryModel];
     restaurants: [RestaurantModel];
     foods: [FoodModel]
+}
+
+//Todo: we will modify later
+// The User Model
+export interface UserModel {
+    firstName: string;
+    lastName: string;
+    contactNumber: string;
+    token: string;
 }
