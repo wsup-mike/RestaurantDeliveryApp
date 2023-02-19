@@ -7,3 +7,14 @@ export interface UpdateLocationAction {
     readonly type: 'ON_UPDATE_LOCATION',
     payload: LocationGeocodedAddress,
 }
+
+export interface UserErrorAction {
+    readonly type: 'ON_USER_ERROR',
+    payload: any
+}
+
+
+//Create type where all actions will consildate 2:  
+export type  {
+
+}
