@@ -4,7 +4,14 @@ import { Dispatch } from 'react';
 import { BASE_URL } from '../../utils';
 import { FoodAvailability } from '../models';
 
+
+// Availability Action
 export interface AvailabilityAction {
     readonly type: 'ON_AVAILABILITY',
     payload: FoodAvailability,
+}
+
+export interface ShoppingErrorAction {
+    readonly type: 'ON_SHOPPING_ERROR',
+    payload: any
 }
