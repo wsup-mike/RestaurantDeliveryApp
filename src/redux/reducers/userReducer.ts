@@ -9,8 +9,16 @@ const initialState: UserState = {
 }
 
 
-const UserReducer = () => {
-
+const UserReducer = (state: UserState = initialState, action: UserAction) => {
+    switch(action.type) {
+        case 'ON_UPDATE_LOCATION':
+            return {
+                ...state,
+                location: action.payload
+            }
+        default: 
+            return state;
+    }
 }
 
 export { UserReducer }
