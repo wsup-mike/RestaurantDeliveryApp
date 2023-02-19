@@ -1,4 +1,5 @@
-import { UserAction} from '../actions'
+import { UserAction} from '../actions';
+import { UserState } from '../models';
 
 const UserReducer = () => {
 
