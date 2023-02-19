@@ -51,4 +51,5 @@ export interface UserModel {
 export interface UserState {
     user: UserModel;
     location: LocationGeocodedAddress;
+    error: string | undefined;
 }
