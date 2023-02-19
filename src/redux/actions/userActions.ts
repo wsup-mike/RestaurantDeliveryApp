@@ -13,8 +13,5 @@ export interface UserErrorAction {
     payload: any
 }
 
-
 //Create type where all actions will consildate 2:  
-export type  {
-
-}
+export type UserAction = UpdateLocationAction | UserErrorAction;
