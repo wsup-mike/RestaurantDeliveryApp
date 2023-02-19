@@ -1,4 +1,4 @@
-// To create 3 individual interfaces ('Models!') for our final data object (Define this object shape)
+// To create individual interfaces ('Models!') for use throughout our final data object (Define this object shape)
 
 // To use expo location to 
 import { LocationGeocodedAddress} from 'expo-location';
