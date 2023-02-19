@@ -19,4 +19,29 @@ export interface ShoppingErrorAction {
 export type ShoppingAction = AvailabilityAction | ShoppingErrorAction;
 
 //New action creator function: Trigger actions from components
+export const onUpdateLocation = () => {
+    return async ( dispatch: Dispatch<ShoppingAction>) => {
+        try {
+            // First to call the Axios webservice
+            const response = await axios.get<FoodAvailability>(`${BASE_URL}/food/availability/8787878`)
 
+            if(!response) {
+                dispatch({
+                    type: 'ON_SHOPPING_ERROR',
+                    payload: 'Availability error'
+                })
+            }
+
+            // save our location to local storage
+            dispatch({
+                type: 'ON_AVAILABILITY',
+                payload: response.data,
+            })
+        } catch (error) {
+            dispatch({
+                type: 'ON_SHOPPING_ERROR',
+                payload: error,
+            })
+        }
+    }
+}
