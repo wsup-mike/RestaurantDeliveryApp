@@ -1,4 +1,4 @@
-// To create interfaces ('Models!') for our final data object (Define this object shape)
+// To create 3 individual interfaces ('Models!') for our final data object (Define this object shape)
 
 //Category Model
 export interface Category {
