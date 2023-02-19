@@ -15,3 +15,6 @@ export interface ShoppingErrorAction {
     readonly type: 'ON_SHOPPING_ERROR',
     payload: any
 }
+
+//New action creator function: Trigger actions from components
+
