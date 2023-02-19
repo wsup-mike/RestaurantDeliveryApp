@@ -1,7 +1,7 @@
 // To create 3 individual interfaces ('Models!') for our final data object (Define this object shape)
 
 // To use expo location to 
-import { } from 'expo-location';
+import { LocationGeocodedAddress} from 'expo-location';
 
 //Category Model
 export interface CategoryModel {
@@ -45,4 +45,10 @@ export interface UserModel {
     lastName: string;
     contactNumber: string;
     token: string;
+}
+
+// The User State Model
+export interface UserState {
+    user: UserModel;
+    location: LocationGeocodedAddress;
 }
