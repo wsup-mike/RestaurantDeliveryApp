@@ -1,7 +1,9 @@
 import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, Text, View, Image } from 'react-native';
 import 'react-native-gesture-handler';
+
 import { Provider } from 'react-redux';
+import { store } from './src/redux';
 
 import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack'
@@ -12,9 +14,6 @@ import { LandingScreen } from './src/screens/LandingScreen';
 import { AccountScreen } from './src/screens/AccountScreen';
 import { CartScreen } from './src/screens/CartScreen';
 import { OfferScreen } from './src/screens/OfferScreen';
-
-
-
 
 const LandingStack = createStackNavigator();
 const HomeStack = createStackNavigator();
