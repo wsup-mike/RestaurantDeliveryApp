@@ -85,3 +85,7 @@ const styles = StyleSheet.create({
         backgroundColor: 'cyan',
     }
 });
+
+const mapToStateProps = (state: ApplicationState) => ({
+    useReducer: state.userReducer
+})
