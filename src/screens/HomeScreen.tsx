@@ -24,6 +24,7 @@ const _HomeScreen: React.FC<LandingProps> = (props) => {
     const [errorMsg, setErrorMsg] = useState("");
     const [address, setAddress] = useState<Location.LocationGeocodedAddress>();
     const [displayAddress, setDisplayAddress] =  useState("Waiting for current location");
+    const { location } = props.userReducer;
     
 
     useEffect(() => {
