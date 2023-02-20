@@ -2,6 +2,7 @@ import axios from "axios";
 import { Dispatch } from "react";
 import { BASE_URL } from "../../utils";
 import { LocationGeocodedAddress } from "expo-location";
+import AsyncStorage from "@react-native-async-storage/async-storage";
 
 export interface UpdateLocationAction {
     readonly type: 'ON_UPDATE_LOCATION',
