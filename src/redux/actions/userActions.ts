@@ -21,6 +21,8 @@ export type UserAction = UpdateLocationAction | UserErrorAction;
 export const onUpdateLocation = (location: LocationGeocodedAddress) => {
     return async ( dispatch: Dispatch<UserAction>) => {
         try {
+            const locationString = JSON.stringify(location)
+            //Save our location in local storage
             dispatch({
                 type: 'ON_UPDATE_LOCATION',
                 payload: location,
