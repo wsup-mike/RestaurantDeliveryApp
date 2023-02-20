@@ -53,3 +53,10 @@ export interface UserState {
     location: LocationGeocodedAddress;
     error: string | undefined;
 }
+
+// Now Shopping related models
+// The ShoppingState model
+export interface ShoppingState {
+    availability: FoodAvailability,
+    // other models
+}
