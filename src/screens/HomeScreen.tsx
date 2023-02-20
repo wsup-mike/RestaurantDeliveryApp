@@ -4,13 +4,16 @@ import * as Location from 'expo-location';
 import { useNavigation } from "@react-navigation/native";
 
 import { connect } from "react-redux";
-import { onUpdateLocation, UserState, ApplicationState } from "../redux";
+import { onUpdateLocation, UserState, ApplicationState, onAvailability, ShoppingState } from "../redux";
+import { ShoppingReducer } from "../redux/reducers/shoppingReducer";
 
 const screenWidth = Dimensions.get('screen').width;
 
 interface LandingProps {
     userReducer: UserState,
+    shoppingReducer: ShoppingState,
     onUpdateLocation: Function,
+    onAvailability: Function,
 }
 
 
@@ -21,6 +24,7 @@ const _HomeScreen: React.FC<LandingProps> = (props) => {
     const [errorMsg, setErrorMsg] = useState("");
     const [address, setAddress] = useState<Location.LocationGeocodedAddress>();
     const [displayAddress, setDisplayAddress] =  useState("Waiting for current location");
+    
 
     useEffect(() => {
         (async() => {
@@ -97,9 +101,10 @@ const styles = StyleSheet.create({
 });
 
 const mapToStateProps = (state: ApplicationState) => ({
-    useReducer: state.userReducer
+    useReducer: state.userReducer,
+    shoppingReducer: state.shoppingReducer
 })
 
-const HomeScreen = connect(mapToStateProps, { onUpdateLocation })(_HomeScreen)
+const HomeScreen = connect(mapToStateProps, { onUpdateLocation, onAvailability })(_HomeScreen)
 
 export { HomeScreen }
