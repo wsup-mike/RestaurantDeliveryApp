@@ -14,7 +14,7 @@ interface LandingProps {
 }
 
 
-const _HomeScreen = () => {
+const _HomeScreen: React.FC<LandingProps> = (props) => {
     const navigation = useNavigation();
     const [errorMsg, setErrorMsg] = useState("");
     const [address, setAddress] = useState<Location.LocationGeocodedAddress>();
