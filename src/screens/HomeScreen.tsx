@@ -7,7 +7,7 @@ import { connect } from "react-redux";
 import { onUpdateLocation, UserState, ApplicationState } from "../redux";
 
 
-export const HomeScreen = () => {
+const _HomeScreen = () => {
     const navigation = useNavigation();
     const [errorMsg, setErrorMsg] = useState("");
     const [address, setAddress] = useState<Location.LocationGeocodedAddress>();
