@@ -89,3 +89,5 @@ const styles = StyleSheet.create({
 const mapToStateProps = (state: ApplicationState) => ({
     useReducer: state.userReducer
 })
+
+const HomeScreen = connect(mapToStateProps, { onUpdateLocation })(_HomeScreen)
