@@ -4,8 +4,7 @@ import * as Location from 'expo-location';
 import { useNavigation } from "@react-navigation/native";
 
 import { connect } from "react-redux";
-
-
+import { onUpdateLocation, UserState, ApplicationState } from "../redux";
 
 
 export const HomeScreen = () => {
