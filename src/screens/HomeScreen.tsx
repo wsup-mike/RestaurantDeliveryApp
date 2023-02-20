@@ -91,3 +91,5 @@ const mapToStateProps = (state: ApplicationState) => ({
 })
 
 const HomeScreen = connect(mapToStateProps, { onUpdateLocation })(_HomeScreen)
+
+export { HomeScreen }
