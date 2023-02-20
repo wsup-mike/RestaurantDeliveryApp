@@ -8,6 +8,10 @@ import { onUpdateLocation, UserState, ApplicationState } from "../redux";
 
 const screenWidth = Dimensions.get('screen').width;
 
+interface LandingProps {
+    userReducer: UserState,
+    onUpdateLocation: Function,
+}
 
 
 const _HomeScreen = () => {
