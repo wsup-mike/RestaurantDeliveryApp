@@ -6,6 +6,9 @@ import { useNavigation } from "@react-navigation/native";
 import { connect } from "react-redux";
 import { onUpdateLocation, UserState, ApplicationState } from "../redux";
 
+const screenWidth = Dimensions.get('screen').width;
+
+
 
 const _HomeScreen = () => {
     const navigation = useNavigation();
