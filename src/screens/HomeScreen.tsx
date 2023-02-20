@@ -41,6 +41,7 @@ const _HomeScreen: React.FC<LandingProps> = (props) => {
 
                 for(let item of addressResponse) {
                     setAddress(item)
+                    onUpdateLocation(item)
                     let currentAddress = `${item.name} ${item.city} ${item.postalCode}`
                     setDisplayAddress(currentAddress)                    
                     return;
