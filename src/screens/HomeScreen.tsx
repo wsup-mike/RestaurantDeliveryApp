@@ -63,7 +63,7 @@ const _HomeScreen: React.FC<LandingProps> = (props) => {
     return (
         <View style={styles.container}>
             <View style={styles.navigation}>
-                <Text>Navigation</Text>
+                <Text>Navigation {JSON.stringify(location)}</Text>
             </View>
             <View style={styles.body}>
                 <Text>The detected address is:</Text>
@@ -103,8 +103,8 @@ const styles = StyleSheet.create({
 });
 
 const mapToStateProps = (state: ApplicationState) => ({
-    useReducer: state.userReducer,
-    shoppingReducer: state.shoppingReducer
+    userReducer: state.userReducer,
+    shoppingReducer: state.shoppingReducer,
 })
 
 const HomeScreen = connect(mapToStateProps, { onUpdateLocation, onAvailability })(_HomeScreen)
