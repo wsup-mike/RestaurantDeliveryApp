@@ -3,6 +3,10 @@ import { View, Text, StyleSheet, Dimensions, Image } from 'react-native';
 import * as Location from 'expo-location';
 import { useNavigation } from "@react-navigation/native";
 
+import { connect } from "react-redux";
+
+
+
 
 export const HomeScreen = () => {
     const navigation = useNavigation();
