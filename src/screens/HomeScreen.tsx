@@ -28,37 +28,39 @@ const _HomeScreen: React.FC<LandingProps> = (props) => {
     const {availability} = props.shoppingReducer;
     
 
-    useEffect(() => {
-        (async() => {
-            let { status } = await Location.requestForegroundPermissionsAsync();
 
-            if ( status !== 'granted') {
-                setErrorMsg('Permission to access device location not granted')
-            }
+    //Old useEffect - Populates address in center of screen upon retrieval from Expo Location 
+    // useEffect(() => {
+    //     (async() => {
+    //         let { status } = await Location.requestForegroundPermissionsAsync();
 
-            let location: any = await Location.getCurrentPositionAsync({});
+    //         if ( status !== 'granted') {
+    //             setErrorMsg('Permission to access device location not granted')
+    //         }
 
-            const { coords } = location;
+    //         let location: any = await Location.getCurrentPositionAsync({});
 
-            if (coords) {
-                const { latitude, longitude } = coords;
+    //         const { coords } = location;
 
-                let addressResponse: any = await Location.reverseGeocodeAsync({ latitude, longitude })
+    //         if (coords) {
+    //             const { latitude, longitude } = coords;
 
-                for(let item of addressResponse) {
-                    setAddress(item)
-                    onUpdateLocation(item)
-                    let currentAddress = `${item.name} ${item.city} ${item.postalCode}`
-                    setDisplayAddress(currentAddress)                    
-                    return;
-                }
+    //             let addressResponse: any = await Location.reverseGeocodeAsync({ latitude, longitude })
 
-            } else {
-                //notify user something went wrong with location
-            }
-        })();
+    //             for(let item of addressResponse) {
+    //                 setAddress(item)
+    //                 onUpdateLocation(item)
+    //                 let currentAddress = `${item.name} ${item.city} ${item.postalCode}`
+    //                 setDisplayAddress(currentAddress)                    
+    //                 return;
+    //             }
 
-    }, [])
+    //         } else {
+    //             //notify user something went wrong with location
+    //         }
+    //     })();
+
+    // }, [])
     
     return (
         <View style={styles.container}>
@@ -72,8 +74,9 @@ const _HomeScreen: React.FC<LandingProps> = (props) => {
                 </View>
             </View>
             <View style={styles.body}>
-                <Text>The detected address is:</Text>
-                <Text>{displayAddress}</Text>
+                {/* From old useEffect */}
+                {/* <Text>The detected address is:</Text>
+                <Text>{displayAddress}</Text> */}
                 <Text>Home Screen</Text>
             </View>
             <View style={styles.footer}>
