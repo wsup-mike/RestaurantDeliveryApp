@@ -30,7 +30,7 @@ const _HomeScreen: React.FC<LandingProps> = (props) => {
     const {availability} = props.shoppingReducer;
     const { categories, foods, restaurants } = availability;
 
-    // console.log(foods)
+    console.log(foods)
     
     useEffect(() => {
         props.onAvailability(location.postalCode)

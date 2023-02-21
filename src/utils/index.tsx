@@ -1,3 +1,3 @@
-export const BASE_URL = "http://localhost:8888/food/";
+export const BASE_URL = "http://localhost:8888/";
 
 export * from './useNavigation';
