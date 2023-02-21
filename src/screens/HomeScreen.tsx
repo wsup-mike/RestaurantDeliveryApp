@@ -26,6 +26,7 @@ const _HomeScreen: React.FC<LandingProps> = (props) => {
     const [displayAddress, setDisplayAddress] =  useState("Waiting for current location");
     const { location } = props.userReducer;
     const {availability} = props.shoppingReducer;
+    const { categories, foods, restaurants } = availability;
     
 
 
