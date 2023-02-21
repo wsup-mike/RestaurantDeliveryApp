@@ -63,7 +63,9 @@ const _HomeScreen: React.FC<LandingProps> = (props) => {
     return (
         <View style={styles.container}>
             <View style={styles.navigation}>
-                <Text>Navigation {JSON.stringify(location)}</Text>
+                <View style={{ marginTop: 20, flex: 1, backgroundColor: 'white'}}>
+                    <Text>Navigation {JSON.stringify(location)}</Text>
+                </View>
             </View>
             <View style={styles.body}>
                 <Text>The detected address is:</Text>
