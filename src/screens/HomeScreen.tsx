@@ -21,23 +21,26 @@ const _HomeScreen: React.FC<LandingProps> = (props) => {
       
     const { userReducer, onUpdateLocation} = props;
     const navigation = useNavigation();
+
     const [errorMsg, setErrorMsg] = useState("");
     const [address, setAddress] = useState<Location.LocationGeocodedAddress>();
     const [displayAddress, setDisplayAddress] =  useState("Waiting for current location");
+    
     const { location } = props.userReducer;
     const {availability} = props.shoppingReducer;
     const { categories, foods, restaurants } = availability;
 
-    console.log(foods)
+    // console.log(foods)
     
-    // useEffect(() => {
-    //     props.onAvailability(location.postalCode)
-    // });
+    useEffect(() => {
+        props.onAvailability(location.postalCode)
+    });
 
 
    // Old useEffect - Populates address in center of screen upon retrieval from Expo Location 
     useEffect(() => {
         (async() => {
+            
             let { status } = await Location.requestForegroundPermissionsAsync();
 
             if ( status !== 'granted') {
