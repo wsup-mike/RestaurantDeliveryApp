@@ -27,6 +27,8 @@ const _HomeScreen: React.FC<LandingProps> = (props) => {
     const { location } = props.userReducer;
     const {availability} = props.shoppingReducer;
     const { categories, foods, restaurants } = availability;
+
+    console.log(foods)
     
 
 
