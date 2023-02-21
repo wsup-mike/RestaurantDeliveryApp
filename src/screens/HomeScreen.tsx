@@ -63,8 +63,12 @@ const _HomeScreen: React.FC<LandingProps> = (props) => {
     return (
         <View style={styles.container}>
             <View style={styles.navigation}>
-                <View style={{ marginTop: 20, flex: 1, backgroundColor: 'white', paddingLeft: 20, paddingRight: 20}}>
+                <View style={{ marginTop: 50, flex: 4, backgroundColor: 'white', paddingLeft: 20, paddingRight: 20, alignItems: 'center', justifyContent: 'center', flexDirection: 'row'}}> 
                     <Text>{`${location.name} ${location.city} ${location.postalCode}`}</Text>
+                    
+                </View>
+                <View style={{ flex: 8, backgroundColor: 'green'}}>
+                    <Text>Search Bar</Text>
                 </View>
             </View>
             <View style={styles.body}>
