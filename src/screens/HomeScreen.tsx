@@ -30,49 +30,50 @@ const _HomeScreen: React.FC<LandingProps> = (props) => {
 
     console.log(foods)
     
-    useEffect(() => {
-        props.onAvailability(location.postalCode)
-    });
-
-
-    //Old useEffect - Populates address in center of screen upon retrieval from Expo Location 
     // useEffect(() => {
-    //     (async() => {
-    //         let { status } = await Location.requestForegroundPermissionsAsync();
+    //     props.onAvailability(location.postalCode)
+    // });
 
-    //         if ( status !== 'granted') {
-    //             setErrorMsg('Permission to access device location not granted')
-    //         }
 
-    //         let location: any = await Location.getCurrentPositionAsync({});
+   // Old useEffect - Populates address in center of screen upon retrieval from Expo Location 
+    useEffect(() => {
+        (async() => {
+            let { status } = await Location.requestForegroundPermissionsAsync();
 
-    //         const { coords } = location;
+            if ( status !== 'granted') {
+                setErrorMsg('Permission to access device location not granted')
+            }
 
-    //         if (coords) {
-    //             const { latitude, longitude } = coords;
+            let location: any = await Location.getCurrentPositionAsync({});
 
-    //             let addressResponse: any = await Location.reverseGeocodeAsync({ latitude, longitude })
+            const { coords } = location;
 
-    //             for(let item of addressResponse) {
-    //                 setAddress(item)
-    //                 onUpdateLocation(item)
-    //                 let currentAddress = `${item.name} ${item.city} ${item.postalCode}`
-    //                 setDisplayAddress(currentAddress)                    
-    //                 return;
-    //             }
+            if (coords) {
+                const { latitude, longitude } = coords;
 
-    //         } else {
-    //             //notify user something went wrong with location
-    //         }
-    //     })();
+                let addressResponse: any = await Location.reverseGeocodeAsync({ latitude, longitude })
 
-    // }, [])
+                for(let item of addressResponse) {
+                    setAddress(item)
+                    onUpdateLocation(item)
+                    let currentAddress = `${item.name} ${item.city} ${item.postalCode}`
+                    setDisplayAddress(currentAddress)                    
+                    return;
+                }
+
+            } else {
+                //notify user something went wrong with location
+            }
+        })();
+
+    }, [])
     
     return (
         <View style={styles.container}>
             <View style={styles.navigation}>
                 <View style={{ marginTop: 50, flex: 4, backgroundColor: 'white', paddingLeft: 20, paddingRight: 20, alignItems: 'center', justifyContent: 'center', flexDirection: 'row'}}> 
-                    <Text>{`${location.name} ${location.city} ${location.postalCode}`}</Text>
+                    {/* <Text>{`${location.name} ${location.city} ${location.postalCode}`}</Text> */}
+                    <Text>{displayAddress}</Text>
                     <Text>Edit Button</Text>
                 </View>
                 <View style={{ flex: 8, backgroundColor: 'green'}}>
