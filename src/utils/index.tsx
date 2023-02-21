@@ -1,3 +1,3 @@
-export const BASE_URL = "https://online-foods.herokuapp.com/food/";
+export const BASE_URL = "http://localhost:8888/food/";
 
 export * from './useNavigation';
