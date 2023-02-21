@@ -49,6 +49,7 @@ export const HomeTabsScreen: React.FC = () => {
         name='Home' 
         component={HomeScreen} 
         options={{
+          headerShown: false,
           tabBarIcon: ({focused, color}) => {
             let icon = focused == true ? require('./src/images/home_icon.png') : require('./src/images/home_n_icon.png')
             return <Image source={icon} style={styles.tabIcon} />
