@@ -45,10 +45,9 @@ export const LandingStackScreen: React.FC = () => {
 
 export const HomeTabsScreen: React.FC = () => {
   return (
-    <HomeTabs.Navigator initialRouteName='Home'>
+    <HomeTabs.Navigator initialRouteName='HomeTab'>
       <HomeTabs.Screen 
         name='Home' 
-    
         options={{
           headerShown: false,
           tabBarIcon: ({focused, color}) => {
@@ -60,12 +59,18 @@ export const HomeTabsScreen: React.FC = () => {
       {() => (
         <HomeStack.Navigator>
           <HomeStack.Screen 
-            name='Home'
+            name='HomeTab'
             component={HomeScreen} 
+            options={{
+              headerShown: false
+            }}
           />
           <HomeStack.Screen 
             name='Search'
             component={SearchScreen} 
+            options={{
+              headerShown: false
+            }}
           />
         </HomeStack.Navigator>
       )}
