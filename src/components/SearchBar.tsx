@@ -12,8 +12,16 @@ const SearchBar: React.FC<SearchBarProps> = ({ onEndEditing, didTouch, autoFocus
     return (
         <View style={styles.container}>
             <View style={styles.searchBar}>
-                
+                <Image style={{ width: 25, height: 25 }} source={require('../images/search.png')} />
             </View>
+            <TextInput 
+                style={{ marginLeft: 5, flex: 9, display: 'flex', fontSize: 20, height: 42 }}
+                placeholder={'Search options'}
+                autoFocus={autoFocus}
+                onTouchStart={didTouch}
+                onChangeText={(text) => onTextChange(text)}
+                onEndEditing={onEndEditing}
+            />
         </View>
     )
 };
