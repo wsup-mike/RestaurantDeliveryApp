@@ -13,26 +13,13 @@ const SearchBarButton: React.FC<ButtonProps> = ({  }) => {
 };
 
 const styles = StyleSheet.create({
-    container: {
-        flex: 1,
-        backgroundColor: 'green',
-    },
-
-    navigation: {
-        flex: 2,
-        backgroundColor: 'red',
-    },
-
-    body: {
-        flex: 10,
-        backgroundColor: 'yellow',
+    btn: {
+        display: 'flex',
         justifyContent: 'center',
         alignItems: 'center',
-    },
-
-    footer: {
-        flex: 1,
-        backgroundColor: 'cyan',
+        backgroundColor: 'yellow',
+        width: 60,
+        height: 40,
     }
 });
 
