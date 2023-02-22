@@ -15,6 +15,13 @@ const GenericSearchBarButtonIcon: React.FC<ButtonProps> = ({  onTap, width, heig
             style={[styles.btn, { width, height }]}
             onPress={() => onTap()}
         >
+            <Image 
+                style={{ 
+                    width: (width - 2),
+                    height: (height -2),
+                }}
+                source={icon}
+            />
         </TouchableOpacity>
     )
 };
