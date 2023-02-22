@@ -11,7 +11,10 @@ interface ButtonProps {
 const GenericSearchBarButtonIcon: React.FC<ButtonProps> = ({  onTap, width, height, icon }) => {
     
     return (
-        <TouchableOpacity style={[styles.btn, { width, height }]}>
+        <TouchableOpacity 
+            style={[styles.btn, { width, height }]}
+            onPress={() => onTap()}
+        >
         </TouchableOpacity>
     )
 };
