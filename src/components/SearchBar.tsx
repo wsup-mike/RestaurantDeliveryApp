@@ -8,8 +8,15 @@ interface SearchBarProps {
     onTextChange: Function;
 }
 
+// const DismissKeyboard = ({children}) => (
+//     <TouchableWithoutFeedback onPress={() => Keyboard.dismiss()}>
+//         {children}
+//     </TouchableWithoutFeedback>
+// )
+
 const SearchBar: React.FC<SearchBarProps> = ({ onEndEditing, didTouch, autoFocus, onTextChange }) => {
     return (
+        
         <View style={styles.container}>
             <View style={styles.searchBar}>
                 <Image style={{ width: 25, height: 25 }} source={require('../images/search.png')} />
@@ -20,10 +27,12 @@ const SearchBar: React.FC<SearchBarProps> = ({ onEndEditing, didTouch, autoFocus
                 onTouchStart={didTouch}
                 onChangeText={(text) => onTextChange(text)}
                 onEndEditing={onEndEditing}
+                keyboardAppearance={'dark'}
+
             />
             </View>
-          
         </View>
+        
     )
 };
 

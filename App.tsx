@@ -45,7 +45,7 @@ export const LandingStackScreen: React.FC = () => {
 
 export const HomeTabsScreen: React.FC = () => {
   return (
-    <HomeTabs.Navigator initialRouteName='HomeTab'>
+    <HomeTabs.Navigator initialRouteName='Home'>
       <HomeTabs.Screen 
         name='Home' 
         options={{
