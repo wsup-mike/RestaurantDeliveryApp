@@ -84,7 +84,8 @@ const _HomeScreen: React.FC<LandingProps> = (props) => {
                 </View>
                 <View style={{ flex: 8, backgroundColor: 'green'}}>
                     <SearchBar
-        
+                        onTextChange={() => {}}
+                        
                     />
                 </View>
             </View>
