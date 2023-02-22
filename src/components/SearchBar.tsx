@@ -11,15 +11,7 @@ interface SearchBarProps {
 const SearchBar: React.FC<SearchBarProps> = ({ onEndEditing, didTouch, autoFocus, onTextChange }) => {
     return (
         <View style={styles.container}>
-            <View style={styles.navigation}>
-                <Text>Navigation</Text>
-            </View>
-            <View style={styles.body}>
-                <Text>Search Bar</Text>
-            </View>
-            <View style={styles.footer}>
-                <Text>Footer</Text>
-            </View>
+
         </View>
     )
 };
@@ -28,6 +20,14 @@ const styles = StyleSheet.create({
     container: {
         flex: 1,
         backgroundColor: 'green',
+        height: 60,
+        display: 'flex',
+        flexDirection: 'row',
+        justifyContent: 'space-between',
+        alignContent: 'center',
+        alignItems: 'center',
+        paddingLeft: 20,
+        paddingRight: 20,
     },
 
     navigation: {
