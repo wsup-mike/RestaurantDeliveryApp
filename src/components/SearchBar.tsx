@@ -40,18 +40,6 @@ const styles = StyleSheet.create({
         paddingRight: 20,
     },
 
-    navigation: {
-        flex: 2,
-        backgroundColor: 'red',
-    },
-
-    body: {
-        flex: 10,
-        backgroundColor: 'yellow',
-        justifyContent: 'center',
-        alignItems: 'center',
-    },
-
     footer: {
         flex: 1,
         backgroundColor: 'cyan',
@@ -60,6 +48,7 @@ const styles = StyleSheet.create({
     searchBar: {
         display: 'flex',
         height: 32,
+        
         flex: 1,
         flexDirection: 'row',
         justifyContent: 'space-between',
