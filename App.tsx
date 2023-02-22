@@ -14,6 +14,7 @@ import { LandingScreen } from './src/screens/LandingScreen';
 import { AccountScreen } from './src/screens/AccountScreen';
 import { CartScreen } from './src/screens/CartScreen';
 import { OfferScreen } from './src/screens/OfferScreen';
+import { SearchScreen } from './src/screens/SearchScreen';
 
 const LandingStack = createStackNavigator();
 const HomeStack = createStackNavigator();
@@ -47,7 +48,7 @@ export const HomeTabsScreen: React.FC = () => {
     <HomeTabs.Navigator initialRouteName='Home'>
       <HomeTabs.Screen 
         name='Home' 
-        component={HomeScreen} 
+    
         options={{
           headerShown: false,
           tabBarIcon: ({focused, color}) => {
@@ -55,7 +56,20 @@ export const HomeTabsScreen: React.FC = () => {
             return <Image source={icon} style={styles.tabIcon} />
           }
         }}
-      />
+      >
+      {() => (
+        <HomeStack.Navigator>
+          <HomeStack.Screen 
+            name='Home'
+            component={HomeScreen} 
+          />
+          <HomeStack.Screen 
+            name='Search'
+            component={SearchScreen} 
+          />
+        </HomeStack.Navigator>
+      )}
+      </HomeTabs.Screen>
 
       <HomeTabs.Screen 
         name='Offer' 
