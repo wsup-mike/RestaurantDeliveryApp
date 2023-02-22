@@ -2,8 +2,10 @@ import React, { useState, useEffect } from "react";
 import { StyleSheet, View, Text, TouchableOpacity, TextInput, Image } from 'react-native';
 
 interface SearchBarProps {
-
-
+    onEndEditing?: any | undefined;
+    didTouch?: any | undefined;
+    autoFocus?: boolean | undefined;
+    onTextChange: Function;
 }
 
 const SearchBar: React.FC<SearchBarProps> = ({ props }) => {
