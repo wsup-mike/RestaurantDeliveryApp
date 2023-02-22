@@ -45,6 +45,21 @@ const styles = StyleSheet.create({
     footer: {
         flex: 1,
         backgroundColor: 'cyan',
+    },
+
+    searchBar: {
+        display: 'flex',
+        height: 32,
+        flex: 1,
+        flexDirection: 'row',
+        justifyContent: 'space-between',
+        backgroundColor: '#ededed',
+        alignItems: 'center',
+        borderRadius: 20,
+        paddingLeft: 10,
+        paddingRight: 10,
+        borderColor: '#e5e5e5',
+        borderWidth: 2,
     }
 });
 
