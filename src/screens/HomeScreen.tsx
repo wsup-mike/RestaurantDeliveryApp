@@ -6,6 +6,7 @@ import { useNavigation } from "@react-navigation/native";
 import { connect } from "react-redux";
 import { onUpdateLocation, UserState, ApplicationState, onAvailability, ShoppingState } from "../redux";
 import { ShoppingReducer } from "../redux/reducers/shoppingReducer";
+import { SearchBar } from "../components";
 
 const screenWidth = Dimensions.get('screen').width;
 
@@ -82,7 +83,9 @@ const _HomeScreen: React.FC<LandingProps> = (props) => {
                     <Text>Edit Button</Text>
                 </View>
                 <View style={{ flex: 8, backgroundColor: 'green'}}>
-                    <Text>Search Bar</Text>
+                    <SearchBar
+        
+                    />
                 </View>
             </View>
             <View style={styles.body}>
