@@ -40,11 +40,6 @@ const styles = StyleSheet.create({
         paddingRight: 20,
     },
 
-    footer: {
-        flex: 1,
-        backgroundColor: 'cyan',
-    },
-
     searchBar: {
         display: 'flex',
         height: 32,
