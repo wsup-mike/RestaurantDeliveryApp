@@ -2,12 +2,14 @@ import React, { useState, useEffect } from 'react';
 import { StyleSheet, View, Text, TouchableOpacity, TextInput, Image } from 'react-native';
 
 interface ButtonProps { 
+    onTap: Function;
+    width: number;
 
  }
 
-const SearchBarButton: React.FC<ButtonProps> = ({  }) => {
+const GenericSearchBarButtonIcon: React.FC<ButtonProps> = ({  }) => {
     return (
-        <TouchableOpacity>
+        <TouchableOpacity style={[styles.btn, { }]}>
         </TouchableOpacity>
     )
 };
@@ -23,4 +25,4 @@ const styles = StyleSheet.create({
     }
 });
 
-export { SearchBarButton }
+export { GenericSearchBarButtonIcon }
