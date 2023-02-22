@@ -1,19 +1,19 @@
 import React, { useState, useEffect } from "react";
 import { StyleSheet, View, Text, TouchableOpacity, TextInput, Image } from 'react-native';
 
-interface {
+interface SearchBarProps {
 
 
 }
 
-const : React.FC<> = ({ }) => {
+const SearchBar: React.FC<SearchBarProps> = ({ props }) => {
     return (
         <View style={styles.container}>
             <View style={styles.navigation}>
                 <Text>Navigation</Text>
             </View>
             <View style={styles.body}>
-                <Text>Body</Text>
+                <Text>Search Bar</Text>
             </View>
             <View style={styles.footer}>
                 <Text>Footer</Text>
@@ -46,4 +46,4 @@ const styles = StyleSheet.create({
     }
 });
 
-export { }
+export { SearchBar }
