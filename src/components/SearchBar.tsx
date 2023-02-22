@@ -8,7 +8,7 @@ interface SearchBarProps {
     onTextChange: Function;
 }
 
-const SearchBar: React.FC<SearchBarProps> = ({ props }) => {
+const SearchBar: React.FC<SearchBarProps> = ({ onEndEditing, didTouch, autoFocus, onTextChange }) => {
     return (
         <View style={styles.container}>
             <View style={styles.navigation}>
