@@ -31,6 +31,8 @@ const _HomeScreen: React.FC<LandingProps> = (props) => {
     const { categories, foods, restaurants } = availability;
 
     console.log(foods)
+    console.log(categories)
+    console.log(restaurants)
     
     useEffect(() => {
         props.onAvailability(location.postalCode)
@@ -85,8 +87,8 @@ const _HomeScreen: React.FC<LandingProps> = (props) => {
             </View>
             <View style={styles.body}>
                 {/* From old useEffect */}
-                {/* <Text>The detected address is:</Text>
-                <Text>{displayAddress}</Text> */}
+                <Text>The detected address is:</Text>
+                <Text>{displayAddress}</Text>
                 <Text>Home Screen</Text>
             </View>
             <View style={styles.footer}>
