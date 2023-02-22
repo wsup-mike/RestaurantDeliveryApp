@@ -86,7 +86,7 @@ const _HomeScreen: React.FC<LandingProps> = (props) => {
                     <SearchBar
                         onTextChange={() => {}}
                         didTouch={() => {
-                            navigation.navigate('SearchPage')
+                            navigation.navigate('Search')
                         }}
                     />
                 </View>
