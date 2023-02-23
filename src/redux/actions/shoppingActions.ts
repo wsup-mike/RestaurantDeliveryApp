@@ -30,6 +30,7 @@ export const onAvailability = (postalCode: string) => {
 
             console.log(response)
 
+
             if(!response) {
                 dispatch({
                     type: 'ON_SHOPPING_ERROR',
