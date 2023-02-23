@@ -1,23 +1,15 @@
 import React, { useState, useEffect } from 'react';
 import { StyleSheet, View, Text, TouchableOpacity, TextInput, Image } from 'react-native';
+import { Category } from '../redux'
 
 interface CategoryCardProps { 
-    
+    item: Category;
+    onTap: Function;
  }
 
-const CategoryCard: React.FC<CategoryCardProps> = ({  }) => {
+const CategoryCard: React.FC<CategoryCardProps> = ({ item, onTap }) => {
     return (
-        <View style={styles.container}>
-            <View style={styles.navigation}>
-                <Text>Navigation</Text>
-            </View>
-            <View style={styles.body}>
-                <Text>Body</Text>
-            </View>
-            <View style={styles.footer}>
-                    <Text>Footer</Text>
-            </View>
-        </View>
+        
     )
 };
 
