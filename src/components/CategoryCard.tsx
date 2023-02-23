@@ -11,7 +11,7 @@ const CategoryCard: React.FC<CategoryCardProps> = ({ item, onTap }) => {
     return (
         <TouchableOpacity style={styles.container}>
             <Image source={{ uri: `${item.icon}`}} style={{ width: 120, height: 120, borderRadius: 20, backgroundColor: '#eaeaea'}} />
-            <Text>{item.title}</Text>
+            <Text style={{ fontSize: 14, marginTop: 10, color: '#858585' }}>{item.title}</Text>
         </TouchableOpacity>
     )
 };
