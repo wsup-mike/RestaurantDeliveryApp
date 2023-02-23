@@ -82,7 +82,16 @@ const _HomeScreen: React.FC<LandingProps> = (props) => {
                     <Text>{displayAddress}</Text>
                     <Text>Edit Button</Text>
                 </View>
-                <View style={{ flex: 8, backgroundColor: 'green'}}>
+                <View style={{ 
+                        display: 'flex', 
+                        height: 60, 
+                        justifyContent: 'space-around', 
+                        flexDirection: 'row',
+                        alignItems: 'center',
+                        marginLeft: 4, 
+                    }}
+                        
+                >
                     <SearchBar
                         onTextChange={() => {}}
                         didTouch={() => {
