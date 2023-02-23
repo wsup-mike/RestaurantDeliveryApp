@@ -50,6 +50,8 @@ const _HomeScreen: React.FC<LandingProps> = (props) => {
 
             let location: any = await Location.getCurrentPositionAsync({});
 
+            alert('Permission has been granted! Please wait while we detect your current location...')
+
             const { coords } = location;
 
             if (coords) {
@@ -75,7 +77,17 @@ const _HomeScreen: React.FC<LandingProps> = (props) => {
     return (
         <View style={styles.container}>
             <View style={styles.navigation}>
-                <View style={{ marginTop: 50, flex: 4, backgroundColor: 'white', paddingLeft: 20, paddingRight: 20, alignItems: 'center', justifyContent: 'center', flexDirection: 'row'}}> 
+                <View style={{ 
+                    marginTop: 50, 
+                    flex: 4, 
+                    backgroundColor: 'white', 
+                    paddingLeft: 20, 
+                    paddingRight: 20, 
+                    alignItems: 'center', 
+                    justifyContent: 'center', 
+                    flexDirection: 'row'
+                    }}
+                > 
                     {/* <Text>{`${location.name} ${location.city} ${location.postalCode}`}</Text> */}
                     <Text>{displayAddress}</Text>
                     <Text>Edit Button</Text>
