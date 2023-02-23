@@ -1,9 +1,9 @@
 import React, { useState, useEffect } from 'react';
 import { StyleSheet, View, Text, TouchableOpacity, TextInput, Image } from 'react-native';
-import { Category } from '../redux'
+import { CategoryModel } from '../redux'
 
 interface CategoryCardProps { 
-    item: Category;
+    item: CategoryModel;
     onTap: Function;
  }
 
