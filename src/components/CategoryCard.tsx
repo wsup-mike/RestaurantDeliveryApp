@@ -9,7 +9,10 @@ interface CategoryCardProps {
 
 const CategoryCard: React.FC<CategoryCardProps> = ({ item, onTap }) => {
     return (
-        
+        <TouchableOpacity style={styles.container}>
+            <Image source={{ uri: `${item.icon}`}}/>
+            <Text>{item.title}</Text>
+        </TouchableOpacity>
     )
 };
 
@@ -19,22 +22,6 @@ const styles = StyleSheet.create({
         backgroundColor: 'green',
     },
 
-    navigation: {
-        flex: 2,
-        backgroundColor: 'red',
-    },
-
-    body: {
-        flex: 10,
-        backgroundColor: 'yellow',
-        justifyContent: 'center',
-        alignItems: 'center',
-    },
-
-    footer: {
-        flex: 1,
-        backgroundColor: 'cyan',
-    }
 });
 
 export { CategoryCard }
