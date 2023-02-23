@@ -44,6 +44,7 @@ export const onAvailability = (postalCode: string) => {
                 payload: response.data,
             })
         } catch (error) {
+            console.log(error)
             dispatch({
                 type: 'ON_SHOPPING_ERROR',
                 payload: error,
