@@ -7,6 +7,7 @@ import { LocationGeocodedAddress} from 'expo-location';
 export interface CategoryModel {
     title: string,
     icon: string,
+    id: string,
 }
 
 //Food Model
