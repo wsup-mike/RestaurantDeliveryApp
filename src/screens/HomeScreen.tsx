@@ -115,6 +115,7 @@ const _HomeScreen: React.FC<LandingProps> = (props) => {
                         showsHorizontalScrollIndicator={false}
                         data={categories}
                         renderItem={({ item }) => <CategoryCard onTap={() => {alert('Category tapped!')}} item={item} />} 
+                        keyExtractor={(item) => `${item.id}`}
                     />
                 </ScrollView>
             </View>
