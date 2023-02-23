@@ -6,7 +6,7 @@ import { useNavigation } from "@react-navigation/native";
 import { connect } from "react-redux";
 import { onUpdateLocation, UserState, ApplicationState, onAvailability, ShoppingState } from "../redux";
 import { ShoppingReducer } from "../redux/reducers/shoppingReducer";
-import { SearchBar } from "../components";
+import { GenericSearchBarButtonIcon, SearchBar } from "../components";
 
 const screenWidth = Dimensions.get('screen').width;
 
@@ -88,6 +88,12 @@ const _HomeScreen: React.FC<LandingProps> = (props) => {
                         didTouch={() => {
                             navigation.navigate('Search')
                         }}
+                    />
+                    <GenericSearchBarButtonIcon 
+                        onTap={() => {}}
+                        icon={require('../images/hambar.png')}
+                        width={50}
+                        height={40}
                     />
                 </View>
             </View>
