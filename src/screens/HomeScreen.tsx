@@ -120,7 +120,7 @@ const _HomeScreen: React.FC<LandingProps> = (props) => {
 const styles = StyleSheet.create({
     container: {
         flex: 1,
-        backgroundColor: 'green'
+        backgroundColor: '#FFF'
     },
 
     navigation: {
