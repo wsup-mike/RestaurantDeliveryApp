@@ -18,8 +18,11 @@ const CategoryCard: React.FC<CategoryCardProps> = ({ item, onTap }) => {
 
 const styles = StyleSheet.create({
     container: {
-        flex: 1,
-        backgroundColor: 'green',
+        width: 120,
+        height: 140,
+        justifyContent: 'space-around',
+        alignItems: 'center',
+        margin: 5
     },
 
 });
