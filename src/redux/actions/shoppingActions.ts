@@ -26,7 +26,7 @@ export const onAvailability = (postalCode: string) => {
     return async ( dispatch: Dispatch<ShoppingAction> ) => {
         try {
             // First to call the Axios webservice
-            const response = await axios.get<FoodAvailability>(`${BASE_URL}/food/availability/${postalCode}`)
+            const response = await axios.get<FoodAvailability>(`${BASE_URL}food/availability/${postalCode}`)
 
             console.log(response)
 
