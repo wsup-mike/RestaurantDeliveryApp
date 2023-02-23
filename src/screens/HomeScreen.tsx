@@ -6,7 +6,7 @@ import { useNavigation } from "@react-navigation/native";
 import { connect } from "react-redux";
 import { onUpdateLocation, UserState, ApplicationState, onAvailability, ShoppingState } from "../redux";
 import { ShoppingReducer } from "../redux/reducers/shoppingReducer";
-import { GenericSearchBarButtonIcon, SearchBar } from "../components";
+import { CategoryCard, GenericSearchBarButtonIcon, SearchBar } from "../components";
 import { FlatList, ScrollView } from "react-native-gesture-handler";
 
 const screenWidth = Dimensions.get('screen').width;
@@ -30,11 +30,8 @@ const _HomeScreen: React.FC<LandingProps> = (props) => {
     
     const { location } = props.userReducer;
     const {availability} = props.shoppingReducer;
-    const { categories, foods, restaurants } = availability;
 
-    console.log(foods)
-    console.log(categories)
-    console.log(restaurants)
+    const { categories, foods, restaurants } = availability;
     
     useEffect(() => {
         props.onAvailability(location.postalCode)
@@ -116,7 +113,8 @@ const _HomeScreen: React.FC<LandingProps> = (props) => {
                     <FlatList 
                         horizontal
                         showsHorizontalScrollIndicator={false}
-                        data={}
+                        data={categories}
+                        renderItem={({ item }) => <CategoryCard onTap={() => {}} item={item} />} 
                     />
                 </ScrollView>
             </View>
