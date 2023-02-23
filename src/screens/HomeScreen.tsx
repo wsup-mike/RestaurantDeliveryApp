@@ -7,6 +7,7 @@ import { connect } from "react-redux";
 import { onUpdateLocation, UserState, ApplicationState, onAvailability, ShoppingState } from "../redux";
 import { ShoppingReducer } from "../redux/reducers/shoppingReducer";
 import { GenericSearchBarButtonIcon, SearchBar } from "../components";
+import { FlatList, ScrollView } from "react-native-gesture-handler";
 
 const screenWidth = Dimensions.get('screen').width;
 
@@ -111,6 +112,13 @@ const _HomeScreen: React.FC<LandingProps> = (props) => {
                 {/* <Text>The detected address is:</Text>
                 <Text>{displayAddress}</Text>
                 <Text>Home Screen</Text> */}
+                <ScrollView>
+                    <FlatList 
+                        horizontal
+                        showsHorizontalScrollIndicator={false}
+                        data={}
+                    />
+                </ScrollView>
             </View>
       
         </View>
