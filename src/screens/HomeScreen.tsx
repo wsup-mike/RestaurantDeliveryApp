@@ -51,8 +51,8 @@ const _HomeScreen: React.FC<LandingProps> = (props) => {
 
             let location: any = await Location.getCurrentPositionAsync({});
 
-            alert('Permission has been granted! Please wait while we detect your current location...')
-            console.log(`Here in the HomeScreen (In the useEffect), the location is being detected as: ${location}.`)
+            // alert('Permission has been granted! Please wait while we detect your current location...')
+            // console.log(`Here in the HomeScreen (In the useEffect), the location is being detected as: ${location}.`)
 
             const { coords } = location;
 

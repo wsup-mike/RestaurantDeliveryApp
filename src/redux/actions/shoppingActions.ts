@@ -37,7 +37,6 @@ export const onAvailability = () => {
                     payload: 'Availability error'
                 })
             }
-//kick 80s spa
             // save our location to local storage
             dispatch({
                 type: 'ON_AVAILABILITY',
