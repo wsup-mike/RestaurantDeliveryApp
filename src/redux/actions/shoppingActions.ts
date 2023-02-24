@@ -19,15 +19,15 @@ export interface ShoppingErrorAction {
 export type ShoppingAction = AvailabilityAction | ShoppingErrorAction;
 
 //New action creator function: Trigger actions from components
-export const onAvailability = (postCode: string) => {
+export const onAvailability = () => {
     
     
-    console.log(postCode); 
+    // console.log(postCode); 
 
     return async ( dispatch: Dispatch<ShoppingAction> ) => {
         try {
             // First to call the Axios webservice
-            const response = await axios.get<FoodAvailability>(`${BASE_URL}food/availability/${postCode}`)
+            const response = await axios.get<FoodAvailability>(`${BASE_URL}food/availability/400012`)
 
             console.log(response)
 
@@ -37,7 +37,7 @@ export const onAvailability = (postCode: string) => {
                     payload: 'Availability error'
                 })
             }
-
+//kick 80s spa
             // save our location to local storage
             dispatch({
                 type: 'ON_AVAILABILITY',
