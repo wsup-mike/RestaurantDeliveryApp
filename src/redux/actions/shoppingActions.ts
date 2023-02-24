@@ -19,16 +19,21 @@ export interface ShoppingErrorAction {
 export type ShoppingAction = AvailabilityAction | ShoppingErrorAction;
 
 //New action creator function: Trigger actions from components
-export const onAvailability = () => {
+export const onAvailability = (postCode: string) => {
     
     
     // console.log(postCode); 
 
     return async ( dispatch: Dispatch<ShoppingAction> ) => {
+        
+        console.log(`${BASE_URL}food/availability/400012`)
         try {
             // First to call the Axios webservice
-            const response = await axios.get<FoodAvailability>(`${BASE_URL}food/availability/400012`)
+            console.log(`Here's the Base URL:${BASE_URL}. BEFORE the axios.get() call! At least this worked!`)
 
+            const response = await axios.get<FoodAvailability>(`${BASE_URL}food/availability/${postCode}`)
+            
+            console.log(`Here's the Base URL:${BASE_URL}. It's finally running within the try block! Yay!`)
             console.log(response)
 
             if(!response) {
