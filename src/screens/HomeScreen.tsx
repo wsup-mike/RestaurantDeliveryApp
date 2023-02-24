@@ -35,8 +35,8 @@ const _HomeScreen: React.FC<LandingProps> = (props) => {
 
     
     useEffect(() => {
-        props.onAvailability(location.postalCode)
-    });
+        props.onAvailability('400012')
+    }, []);
 
 
    // Old useEffect - Populates address in center of screen upon retrieval from Expo Location 
