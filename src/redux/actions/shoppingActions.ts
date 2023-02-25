@@ -26,7 +26,7 @@ export const onAvailability = (postCode: string) => {
 
     return async ( dispatch: Dispatch<ShoppingAction> ) => {
         
-        console.log(`${BASE_URL}food/availability/400012`)
+        console.log(`${BASE_URL}food/availability/${postCode}`)
         try {
             // First to call the Axios webservice
             console.log(`Here's the Base URL:${BASE_URL}. BEFORE the axios.get() call! At least this worked!`)
